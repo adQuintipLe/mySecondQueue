@@ -6,13 +6,19 @@ use Illuminate\Http\Request;
 
 class FrontSendController extends Controller
 {
-    public function queueDelay()
+    public function queueDelay(Request $request)
     {
-        return view('queue-delay');
+        $currentRoute = $request->path();
+        
+        return view('queue-delay')
+        ->with('delayRoute',$currentRoute);
     }
 
-    public function queueSpecify()
+    public function queueSpecify(Request $request)
     {
-        return view('queue-specify');
+        $currentRoute = $request->path();
+
+        return view('queue-specify')
+        ->with('specificRoute',$currentRoute);
     }
 }

@@ -26,6 +26,7 @@
             <div class="form-group row">
                 <button class="btn btn-primary col-md-12" type="submit">Save</button>
             </div>
+            <input type="hidden" value="{{$specificRoute}}" name="specificRoute">
         </form>
     </div>
 </div>
