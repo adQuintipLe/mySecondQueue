@@ -9,7 +9,15 @@
 </head>
 <body>
     <p>test</p>
+    
+    @if(Session::get('BeforeRoute') == 'queue-delay')
+    <a href="/queue-delay">main</a>
+    @elseif(Session::get('BeforeRoute') == 'queue-specify')
+    <a href="/queue-specify">main</a>
+    @elseif(Session::get('BeforeRoute') == 'null')
     <a href="/">main</a>
+    @endif
+
     @if(Session::has('myVariable'))
 
     <div class="alert alert-success" role="alert">

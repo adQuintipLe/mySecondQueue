@@ -9,7 +9,7 @@ class ViewController extends Controller
 {
     public function index(){
 
-        dd(Session::has('BeforeRoute'));
+        // dd(Session::get('BeforeRoute'));
 
         return view('view');
     }

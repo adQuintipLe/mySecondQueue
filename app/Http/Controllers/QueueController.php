@@ -14,6 +14,8 @@ class QueueController extends Controller
         $text2 = $request->input('txt2');
         $text3 = $request->input('txt3');
 
+        session(['BeforeRoute' => 'null']);
+
         ProcessSaveJob::dispatch($text1,$text2,$text3);
 
         //Session 'key' = session variable; 'value' = ur value
