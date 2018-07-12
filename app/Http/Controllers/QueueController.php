@@ -18,7 +18,7 @@ class QueueController extends Controller
 
         ProcessSaveJob::dispatch($text1,$text2,$text3);
 
-        //Session 'key' = session variable; 'value' = ur value
+        //Session 'key' = session variable; 'value' = ur value on session
         Session::flash('myVariable','all input Basic Queue was successfully save');
 
         return redirect()->action('ViewController@index');
